@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css"> 
+	<script type="text/javascript">
+
+		var answer = parseInt(Math.random() * 100);
+		var tryCount = 0;
+		var maxTryCount = 3;
+		//  Создал пустой обьек для двух игроков
+		var title = { player1: "",
+					  player2: ""}
+
+		// Временно в дебаг тулзе в консоле будет печатать загаданное число			  
+		console.log(answer)
+	
+
+		// excpet id and return value from text field
+		function readInt(id){
+			return +document.getElementById(id).value;
+		}
+		// Updates tag by id
+		function write(id, text){
+			document.getElementById(id).innerHTML = text;
+		}
+		// Hide element 
+		function hide(id){
+			document.getElementById(id).style.display = "none";
+		}
+
+		function guess(){
+			tryCount++;
+
+			for (var i=1; i<3; i++){
+				// цикл через игроков и добавить 1 или 2 player1 or player2, userAnswer1, userAnswer2
+				var message = "player" + i;
+				var userInput = "userAnswer" + i;
+
+				//  Если объект пустой для данного игрока player1 или player2. Добавить содержимое данного элемента. Будет Первый игрок, Второй игрок.
+				if(!title['player' + i]){
+					title['player' + i] = document.getElementById('player' + i).innerHTML;
+				}
+
+				// Перейти к следующему игроку, если элимент уже скрыт. означает что игрок отгадал число
+				if (document.getElementById(userInput) == "none"){
+					continue;
+				}
+
+				if(readInt(userInput) == answer){
+						write(message, title['player' + i] + "<br>" + "Поздравляю, вы угадали!</b>");
+						hide(userInput);
+				} else if(tryCount >= maxTryCount){
+						write(message, title['player' + i] + "<br>" + "Вы проиграли<br>Правильный ответ: " + answer);
+						hide(userInput);
+						hide('button');	
+				} else if(readInt(userInput) > answer){
+					write(message, title['player' + i] + "<br>" +
+						"Вы ввели слишком большое число<br>Попробуйте еще раз. Введите число от 1 до 100</b>");
+				} else if(readInt(userInput) < answer){
+					write(message, title['player' + i] + "<br>" +
+						"Вы ввели слишком маленькое число<br>Попробуйте еще раз. Введите число от 1 до 100</b>");
+				}
+			}
+
+			// Если оба игрока отгадали число спрятать Начать кнопку
+			if (document.getElementById("userAnswer1").style.display == "none" &&
+						document.getElementById("userAnswer2").style.display == "none"){
+				hide('button');	
+
+			}
+		}
+
+	</script>
+</head>
+<body>
+
+<div class="content">
+	<div class="header">
+		<a href="index.html">Главная</a>
+		<a href="puzzle.html">Загадки</a>
+		<a href="#">Угадайка</a>
+		<a href="password.html">Генератор паролей</a>
+	</div>
+
+<div class="contentWrap">
+    <div class="content">
+        <div class="center">
+
+			<h1>Игра угадайка</h1>
+
+			<div class="box">
+
+				<p id="info">Угадайте число от 0 до 100</p>
+
+				<p id="player1">Первый Игрок</p>
+
+			    <input type="text" id="userAnswer1">
+
+			    <p id="player2">Второй Игрок</p>
+
+			    <input type="text" id="userAnswer2">
+				<br>
+				<a href="#" onClick="guess();" id="button">Начать</a>				
+			</div>
+
+        </div>
+    </div>
+</div>
+
+	
+
+</div>
+<div class="footer">
+	Copyright &copy; Nortsev Vladimir
+<div>
+
+
+</body>
+</html>
