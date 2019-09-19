@@ -8,9 +8,9 @@
 
 fruits = ["яблоко", "банан", "киви", "арбуз"]
 print('TASK1:')
-for count in range(len(fruits)):
-    print(f'{count+1}.', fruits[count].rjust(len(max(fruits)), ' '))
-
+right_offset = len(max(fruits, key=len))
+for index, item in enumerate(fruits, start=1):
+    print(f'{index}.', item.rjust(right_offset))
 
 
 # Задача-2:
@@ -167,7 +167,3 @@ for i in duplicates:
 # no_duplicates = set(unique_number) - duplicates
 print('TASK8:')
 print(lst, unique_number, no_duplicates, sep='\n')
-
-
-
-
