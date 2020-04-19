@@ -30,7 +30,7 @@ img[alt="phone"]{
  
 
              /*Зеленая галочка*/
-.list {
+.header {
     
     list-style-image: url(img/list.png);
     list-style-position:inside;
@@ -115,17 +115,17 @@ input[type="name"]{
 
 /*Изменение цвета ссылок при наведение и нажатии*/
 
-.list li a:hover{
+.header li a:hover{
     color:red;
  }
 
-.list li a:active{
+.header li a:active{
     color:darkgoldenrod;
 }
 
 
 /*Добавление стрелок в меню*/
-.list li:hover:before{
+.header li:hover:before{
     content: ">>";
     color: red;
 }
@@ -151,8 +151,8 @@ input[type="name"]{
     border: 1px solid #black;
 }
 
-        /*Заголовок*/
-.header img{
+        /*Заголовок логотип*/
+.container img{
     display: block;
     margin-left: auto; 
     margin-right: auto;
