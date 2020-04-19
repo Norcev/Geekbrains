@@ -1,0 +1,201 @@
+
+
+         /*Красный заголовок*/
+h2 , h1 {
+    background:red;
+    border-radius: 70%;
+    color:white;
+    text-align: center
+    
+    
+}
+     /*Заголовки(Краткое описание товара,Характеристики,Подробное описание товара)*/
+h3{
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    background-color:#eaeaea;
+}
+
+
+          /*Цвет фона*/
+.page_background {
+    background-color: #f8f8f8;
+}
+
+            /*Рамка вокруг картинки*/
+img[alt="phone"]{
+    border: 4px ;
+}
+ 
+
+             /*Зеленая галочка*/
+.list {
+    
+    list-style-image: url(img/list.png);
+    list-style-position:inside;
+    font-family: sans-serif;
+    
+    
+}
+
+/*Каталог телефонов*/
+.phone_catalog_list {
+    list-style-image: url(img/list2.png);
+    list-style-position: inside;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 20pt;
+}
+
+/*конец страницы*/
+.end {
+    text-align-last: center;
+}
+
+.name_phone{
+    text-align: center;
+    font-family:fantasy;
+}
+
+  /*Краткое описание товара*/
+.small_text{
+    color:#707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+
+/*Подробное описание товара*/
+.big_text{
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    
+}
+
+
+/*харастики рисунок списка*/
+.Characteristics {
+    list-style-image: url(img/list3.png);
+}
+
+
+/*Форма контактов*/
+.form{
+/*    border:3px solid red;*/
+/*    border-style: dotted;*/
+/*    text-align: center;*/
+}
+
+/*   Меняем цвет при вводе почты*/
+input[type="email"]:focus {
+	color: #0000ff;
+	background-color: #e0ffff;
+}
+
+
+/*    Пишем с большой буквы фамилию*/
+input[type="surname"]{
+  text-transform: capitalize;
+}
+/*   Пишем с большей буквы имя*/
+input[type="name"]{
+  text-transform: capitalize;
+}
+/*Поля ввода данных формы контакт*/
+.reg {
+    color:darkgreen;
+    
+}
+
+
+
+/*Изменение цвета ссылок при наведение и нажатии*/
+
+.list li a:hover{
+    color:red;
+ }
+
+.list li a:active{
+    color:darkgoldenrod;
+}
+
+
+/*Добавление стрелок в меню*/
+.list li:hover:before{
+    content: ">>";
+    color: red;
+}
+
+/*таблица*/
+.test_table{
+    border: 1px solid black;
+/*width: 200px;*/
+/*    height: 300px;*/
+    margin: auto;
+    border-collapse: collapse;
+    text-align: center
+    
+}
+.test_table td {
+    color: red;
+    border: 1px solid black;
+    vertical-align: top;
+     
+    
+}
+,test_table tr {
+    border: 1px solid #black;
+}
+
+        /*Заголовок*/
+.header img{
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    width: 6em
+    
+}
+
+/*Легенда формы*/
+legend {
+    text-align: left;
+	font-size: 19px;
+	line-height: 16px;
+	color:crimson;
+	font-style: italic
+}
+
+/*Рамка формы*/
+fieldset{
+   font-size: 100%;
+    border-style: dotted;
+    border: solid;
+    border-color: red;
+    border-radius: 5%;
+
+    
+}
+
+.table_title{
+    color: red;
+    text-align: center;
+}
+/*Удаление рамки вокруг изображения*/
+.img{
+	border:1px solid red;
+}
+
+.img:hover{
+	border:none;
+}
+
+/*Заголовок таблицы*/
+.text:first-letter{
+    
+    font-size: 30px;
+    color:brown;
+}
