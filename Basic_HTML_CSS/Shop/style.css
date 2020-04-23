@@ -1,5 +1,29 @@
 
+.page_background{
+    background: url(img/bg23.jpg);
+}    
+.container{
+    
+/*    задание обтекаемотси логотипу*/
+   
+    float: left;
+    
+}
 
+
+
+.header li {
+/*    Выстраивание меню в строчку*/
+   
+    
+    text-align: center;
+/*    border: 1px solid #000;*/
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    
+    
+}
          /*Красный заголовок*/
 h2 , h1 {
     background:red;
@@ -31,7 +55,7 @@ img[alt="phone"]{
 
              /*Зеленая галочка*/
 .header {
-    
+    text-align: center;
     list-style-image: url(img/list.png);
     list-style-position:inside;
     font-family: sans-serif;
@@ -153,7 +177,7 @@ input[type="name"]{
 
         /*Заголовок логотип*/
 .container img{
-    display: block;
+/*    display: block;*/
     margin-left: auto; 
     margin-right: auto;
     width: 6em
